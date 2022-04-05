@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "f41f1638-bea9-469a-b87f-7db1331f6df6",
+		"name": "ListaFilmes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ListaFilmes",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetFilmeById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/filmes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filmes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaveFilme",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Tapa na pantera\",\r\n    \"genero\": \"Coisa doida\",\r\n    \"restricao\": 18,\r\n    \"favorito\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/filmes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filmes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateFilme",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"titulo\": \"Arca de Noé\",\r\n    \"genero\": \"Ficção\",\r\n    \"restricao\": 12,\r\n    \"favorito\": 1\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/filmes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filmes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteFilmeById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "4",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/filmes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filmes",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
