@@ -1,27 +1,25 @@
 package br.com.projetosaula.springprojetoturmas.entity;
 
-import java.util.List;
-
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity(name="aluno")
 public class Aluno extends Pessoa{
 
 	private int ano;
-	@OneToMany
-	private Turma turma;
-	@ManyToMany
-	private List<Disciplina> disciplinas;
 	
+	@OneToOne
+	@JoinColumn(name = "turma_id")
+	private Turma turma;
+		
 	public Aluno() {}
 
-	public Aluno(Turma turma, int ano, List<Disciplina> disciplinas) {
+	public Aluno(Turma turma, int ano) {
 		super();
 		this.turma = turma;
 		this.ano = ano;
-		this.disciplinas = disciplinas;
+	
 	}
 
 	public Turma getTurma() {
@@ -38,14 +36,6 @@ public class Aluno extends Pessoa{
 
 	public void setAno(int ano) {
 		this.ano = ano;
-	}
-
-	public List<Disciplina> getDisciplinas() {
-		return disciplinas;
-	}
-
-	public void setDisciplinas(List<Disciplina> disciplinas) {
-		this.disciplinas = disciplinas;
 	}
 	
 }

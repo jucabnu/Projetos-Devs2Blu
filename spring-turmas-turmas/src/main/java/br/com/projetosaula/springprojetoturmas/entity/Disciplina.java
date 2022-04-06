@@ -1,5 +1,6 @@
 package br.com.projetosaula.springprojetoturmas.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,6 +12,7 @@ public class Disciplina {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	@Column(unique = true)
 	private String nome;
 		
 	public Disciplina() {}

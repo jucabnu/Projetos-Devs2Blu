@@ -1,27 +1,32 @@
 package br.com.projetosaula.springprojetoturmas.entity;
 
-import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity(name="professor")
 public class Professor extends Pessoa {
 	
-	private List<Turma> turmas;
+	@OneToOne
+	@JoinColumn(name="turma_id")
+	private Turma turma;
 
 	public Professor() {}
 
-	public Professor(List<Turma> turmas) {
+	public Professor(Turma turma) {
 		super();
-		this.turmas = turmas;
+		this.turma = turma;
 	}
 
-	public List<Turma> getTurmas() {
-		return turmas;
+	public Turma getTurma() {
+		return turma;
 	}
 
-	public void setTurmas(List<Turma> turmas) {
-		this.turmas = turmas;
+	public void setTurma(Turma turma) {
+		this.turma = turma;
 	}
+
+	
 	
 	
 
