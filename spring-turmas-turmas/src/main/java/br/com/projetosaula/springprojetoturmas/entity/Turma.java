@@ -18,8 +18,7 @@ public class Turma {
 	private int id;
 	private String nome;
 	private String periodo;
-	private int maxAlunos;
-	private int quantidadeAlnos;
+	private int maxAlunos;	
 	
 	@OneToMany(mappedBy = "turma")	
 	private List<Aluno> alunos;
@@ -30,13 +29,12 @@ public class Turma {
 
 	public Turma() {}
 
-	public Turma(String nome, String periodo, int maxAlunos, int quantidadeAlnos, List<Aluno> aluno,
+	public Turma(String nome, String periodo, int maxAlunos, List<Aluno> aluno,
 			Professor professor) {
 		super();
 		this.nome = nome;
 		this.periodo = periodo;
 		this.maxAlunos = maxAlunos;
-		this.quantidadeAlnos = quantidadeAlnos;
 		this.alunos = aluno;
 		this.professor = professor;
 	}
@@ -80,15 +78,7 @@ public class Turma {
 	public void setMaxAlunos(int maxAlunos) {
 		this.maxAlunos = maxAlunos;
 	}
-
-	public int getQuantidadeAlnos() {
-		return quantidadeAlnos;
-	}
-
-	public void setQuantidadeAlnos(int quantidadeAlnos) {
-		this.quantidadeAlnos = quantidadeAlnos;
-	}
-
+	
 	public List<Aluno> getAluno() {
 		return alunos;
 	}
