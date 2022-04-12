@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "39ff6a14-a991-43d2-baac-8cfd3c9fca68",
+		"name": "ProjetoTurmas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PessoaList",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "PessoaAdd",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "AlunoList",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "AlunoAdd",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ano\": 5,\r\n        \"turma\": null,\r\n        \"pessoa\": {\r\n            \"id\": 1,\r\n            \"nome\": \"Bolsonaro\",\r\n            \"idade\": 55,\r\n            \"endereco\": \"Rua Jumbotron, 35\",\r\n            \"sexo\": \"F\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/aluno",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"aluno"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Pessoa {
@@ -15,6 +16,11 @@ public class Pessoa {
 	private int idade;
 	private String endereco;
 	private String sexo;	
+	
+	/*
+	@OneToOne
+	private Aluno aluno;
+	*/
 
 	public Pessoa() {	}
 
