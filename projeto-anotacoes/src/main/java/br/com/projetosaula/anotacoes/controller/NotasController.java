@@ -12,7 +12,7 @@ import br.com.projetosaula.anotacoes.service.NotaService;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/notas")
+@RequestMapping("/api/nota")
 public class NotasController {
 	
 	@Autowired

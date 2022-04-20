@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "bb26b287-67fe-493f-ae45-02ad30a0fc9e",
+		"name": "Anotações",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllCategorias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/categoria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCategoriaId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/categoria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsertCategoria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/categoria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
