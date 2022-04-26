@@ -32,5 +32,14 @@ public class NotaService {
 				.orElseThrow(
 						() -> new Exception("Nota não encontrada"));
 		return nota.getDTO();
+	}
+
+	public NotaDTO add(NotaDTO nota) {
+		// return repository.save(nota.convertToEntity().getDTO());
+		
+		Nota notaSave = nota.convertToEntity();
+		notaSave = repository.save(notaSave);
+		return notaSave.getDTO();
+		
 	}	
 }
