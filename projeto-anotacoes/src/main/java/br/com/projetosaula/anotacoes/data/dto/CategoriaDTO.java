@@ -20,7 +20,7 @@ public class CategoriaDTO implements Serializable {
 	}
 
 	public Categoria convertToEntity() {
-		return new Categoria(getIdCategoria(),
+		return new Categoria(getIdCategoria(), // == null ? null : getIdCategoria()
 				getDescricaoCategoria(), 
 				isFlAtivo());
 	}
