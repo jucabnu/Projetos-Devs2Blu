@@ -18,22 +18,16 @@ public class Categoria {
 	@Column(nullable = false, length = 20)
 	private String descricao;
 	
-	@Column(name="flativo", nullable = false)
+	@Column(name = "flativo", nullable=false)
 	private boolean flAtivo;
 	
-	public Categoria() {}
+    public Categoria() {}
 
 	public Categoria(Integer id, String descricao, boolean flAtivo) {
-		super();
 		this.id = id;
 		this.descricao = descricao;
 		this.flAtivo = flAtivo;
 	}
-	
-	public CategoriaDTO getDTO() {
-		return new CategoriaDTO(getId(), getDescricao(), isFlAtivo());
-	}
-
 
 	public Integer getId() {
 		return id;
@@ -59,5 +53,9 @@ public class Categoria {
 		this.flAtivo = flAtivo;
 	}
 
-	
+	public CategoriaDTO getDTO() {
+		return new CategoriaDTO(getId(), getDescricao(), isFlAtivo());
+	}
+    
+    
 }

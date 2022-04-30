@@ -1,6 +1,5 @@
 package br.com.projetosaula.anotacoes.data.dto;
 
-
 import java.io.Serializable;
 
 import br.com.projetosaula.anotacoes.data.entity.Nota;
@@ -8,23 +7,25 @@ import br.com.projetosaula.anotacoes.data.entity.Nota;
 public class NotaDTO implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-	private Integer idNota;
-	private String tituloNota;
+	private Integer idNota;	
+	private String tituloNota;	
 	private String textoAnotacao;	
 	private CategoriaDTO categoria;
-	
-	public NotaDTO(Integer idNota, String tituloNota, String textoAnotacao, CategoriaDTO categoria) {
-		super();
-		this.idNota = idNota;
-		this.tituloNota = tituloNota;
-		this.textoAnotacao = textoAnotacao;
-		this.categoria = categoria;
-	}
 	
 	public NotaDTO() {}
 	
 	public Nota convertToEntity() {
-		return new Nota(getIdNota(), getTituloNota(), getTextoAnotacao(), getCategoria().convertToEntity());
+		return new Nota(getIdNota(), 
+						getTituloNota(),
+						getTextoAnotacao(), 
+						getCategoria().convertToEntity());
+	}
+
+	public NotaDTO(Integer idNota, String tituloNota, String textoAnotacao, CategoriaDTO categoria) {
+		this.idNota = idNota;
+		this.tituloNota = tituloNota;
+		this.textoAnotacao = textoAnotacao;
+		this.categoria = categoria;
 	}
 
 	public Integer getIdNota() {
@@ -50,7 +51,7 @@ public class NotaDTO implements Serializable {
 	public void setTextoAnotacao(String textoAnotacao) {
 		this.textoAnotacao = textoAnotacao;
 	}
-	
+
 	public CategoriaDTO getCategoria() {
 		return categoria;
 	}
@@ -59,5 +60,6 @@ public class NotaDTO implements Serializable {
 		this.categoria = categoria;
 	}
 	
-
+	
+	
 }

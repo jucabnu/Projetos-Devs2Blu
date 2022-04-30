@@ -18,16 +18,16 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.projetosaula.anotacoes.data.dto.CategoriaDTO;
 import br.com.projetosaula.anotacoes.service.CategoriaService;
 
-@CrossOrigin("*")
 @RestController
+@CrossOrigin("*")
 @RequestMapping("/api/categoria")
 public class CategoriasController {
-	
+
 	@Autowired
 	CategoriaService service;
-	
+
 	@GetMapping
-	public List<CategoriaDTO> getAll(){
+	public List<CategoriaDTO> getAll() {
 		return service.getAll();
 	}
 	
@@ -37,7 +37,7 @@ public class CategoriasController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<CategoriaDTO> save(@RequestBody CategoriaDTO categoria){
+	public ResponseEntity<CategoriaDTO> save(@RequestBody CategoriaDTO categoria) {
 		return new ResponseEntity<CategoriaDTO>(service.save(categoria), HttpStatus.CREATED);
 	}
 	
@@ -45,12 +45,10 @@ public class CategoriasController {
 	public ResponseEntity<Boolean> delete(@PathVariable("id") Integer idCategoria) throws Exception {
 		return new ResponseEntity<>(service.delete(idCategoria), HttpStatus.OK);
 	}
-
+	
+	
 	@PutMapping("/toggleAtivo")
 	public ResponseEntity<Boolean> toggleAtivo(@RequestBody Integer idCategoria) throws Exception {
 		return new ResponseEntity<>(service.toggle(idCategoria), HttpStatus.ACCEPTED);
-	}	
-	
-	public CategoriasController() {}
-
+	}
 }

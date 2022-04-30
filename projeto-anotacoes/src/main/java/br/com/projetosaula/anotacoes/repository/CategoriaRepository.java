@@ -9,7 +9,6 @@ import br.com.projetosaula.anotacoes.data.entity.Categoria;
 
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Integer>{
-	
-	public List<Categoria> findByDescricaoContaining(String descricao);
 
+	public List<Categoria> findByDescricaoContaining(String descricao);
 }

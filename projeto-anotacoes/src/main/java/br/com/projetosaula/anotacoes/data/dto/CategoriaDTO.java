@@ -9,20 +9,22 @@ public class CategoriaDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Integer idCategoria;
-	private String descricaoCategoria;
+	private String  descricaoCategoria;
 	private boolean flAtivo;
 	
+	public CategoriaDTO() {}
+
 	public CategoriaDTO(Integer idCategoria, String descricaoCategoria, boolean flAtivo) {
 		super();
 		this.idCategoria = idCategoria;
 		this.descricaoCategoria = descricaoCategoria;
 		this.flAtivo = flAtivo;
 	}
-
+	
 	public Categoria convertToEntity() {
-		return new Categoria(getIdCategoria(), // == null ? null : getIdCategoria()
-				getDescricaoCategoria(), 
-				isFlAtivo());
+		return new Categoria(getIdCategoria(), 
+							getDescricaoCategoria(),
+							isFlAtivo());
 	}
 
 	public Integer getIdCategoria() {
@@ -49,4 +51,6 @@ public class CategoriaDTO implements Serializable {
 		this.flAtivo = flAtivo;
 	}
 	
+	
+
 }

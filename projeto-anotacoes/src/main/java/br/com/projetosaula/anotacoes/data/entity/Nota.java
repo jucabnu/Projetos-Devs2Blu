@@ -29,7 +29,7 @@ public class Nota {
 	
 	public Nota() {}
 
-	public Nota(Integer id, String titulo, String anotacao, Categoria categoria) {		
+	public Nota(Integer id, String titulo, String anotacao, Categoria categoria) {
 		this.id = id;
 		this.titulo = titulo;
 		this.anotacao = anotacao;
@@ -70,7 +70,7 @@ public class Nota {
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
-	}	
+	}
 	
 	
 	

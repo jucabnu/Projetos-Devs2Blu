@@ -8,8 +8,7 @@ import org.springframework.stereotype.Repository;
 import br.com.projetosaula.anotacoes.data.entity.Nota;
 
 @Repository
-public interface NotaRepository extends JpaRepository<Nota, Integer>{
-	
-	public List<Nota> findByTituloContaining(String titulo);
+public interface NotaRepository extends JpaRepository<Nota, Integer> {
 
+	public List<Nota> findByTituloContaining(String titulo);
 }
