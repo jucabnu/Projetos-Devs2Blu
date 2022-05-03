@@ -41,4 +41,9 @@ public class NotaService {
 		repository.delete(getById(id).convertToEntity());
 		return true;
 	}
+
+	public NotaDTO update(NotaDTO nota) throws Exception {
+		getById(nota.getIdNota());
+		return add(nota);
+	}
 }

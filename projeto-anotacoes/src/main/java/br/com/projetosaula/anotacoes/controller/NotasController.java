@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -38,6 +39,11 @@ public class NotasController {
 	@PostMapping
 	public ResponseEntity<NotaDTO> addNota(@RequestBody NotaDTO nota) {
 		return new ResponseEntity<>(service.add(nota), HttpStatus.CREATED);
+	}
+	
+	@PutMapping
+	public ResponseEntity<NotaDTO> update(@RequestBody NotaDTO nota) throws Exception{
+		return new ResponseEntity<>(service.update(nota), HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/{id}")
