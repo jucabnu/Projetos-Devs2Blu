@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 import br.com.projetosaula.energia.data.dto.UsuarioDTO;
 
 @Entity
@@ -101,6 +100,8 @@ public class Usuario {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	
 	
 	
 	
