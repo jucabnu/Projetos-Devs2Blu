@@ -66,7 +66,7 @@ public class UsuarioService implements UserDetailsService {
 
 	@Override
     public UserDetails loadUserByUsername(String loginOuEmail) throws UsernameNotFoundException {
-       Usuario usuario = repository.findByLoginOuEmail(loginOuEmail, loginOuEmail)
+       Usuario usuario = repository.findByLoginOrEmail(loginOuEmail, loginOuEmail)
                .orElseThrow(() ->
                        new UsernameNotFoundException("Usuário não encontrado pelo login ou e-mail:" + loginOuEmail));
         return new org.springframework.security.core.userdetails.User(usuario.getEmail(),
